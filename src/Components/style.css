@@ -1,0 +1,891 @@
+/* Global Styling */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* Theme Styling */
+  .exchanges-container.light {
+    background-color: #f1f5f9;
+    color: #1f2937;
+  }
+  
+  .exchanges-container.dark {
+    background-color: #1e293b;
+    color: #f8fafc;
+  }
+  
+  /* Header Styling */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .search-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .search-input {
+    padding: 10px;
+    width: 250px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #6366f1;
+  }
+  
+  .theme-toggle {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #6366f1;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .theme-toggle:hover {
+    background-color: #4f46e5;
+  }
+  
+  /* Exchange List Styling */
+  .exchange-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+  }
+  
+  /* Exchange Card Styling */
+  .exchange-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .exchanges-container.dark .exchange-card {
+    background-color: #1f2937;
+    border-color: #4b5563;
+  }
+  
+  .exchange-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .exchange-card a {
+    text-decoration: none;
+    color: #3b82f6;
+    display: block;
+    padding: 20px;
+  }
+  
+  .exchange-card a:hover {
+    color: #1d4ed8;
+  }
+  
+  .exchange-card .image-container {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .exchange-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  .exchange-card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header {
+      gap: 15px;
+    }
+  
+    .exchange-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .exchange-card {
+      width: 90%;
+    }
+  
+    .search-input {
+      width: 200px;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* coins */
+
+  /* Default light theme */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --link-color: #0066cc;
+    --card-bg-color: #f0f0f0;
+    --card-hover-bg-color: #e0e0e0;
+    --coin-name-color: #000000;
+    --coin-symbol-color: #666666;
+    --coin-price-color: #000000;
+}
+
+[data-theme='dark'] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --link-color: #80b3ff;
+    --card-bg-color: #1c1c1c;
+    --card-hover-bg-color: #333333;
+    --coin-name-color: #ffffff;
+    --coin-symbol-color: #bbbbbb;
+    --coin-price-color: #f5f5f5;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.coins-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.theme-toggle-container {
+    display: flex; /* Use flexbox to align items */
+    margin-top: 20px;/* Add some space from the top */
+    align-items: center;
+    justify-content: center; 
+}
+
+.theme-toggle {
+    background-color: var(--link-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.currency-select label {
+    margin: 0 10px;
+}
+
+.currency-select input {
+    margin-right: 5px;
+}
+
+.search-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-input {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.coin-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.coin-card {
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.coin-card:hover {
+    background-color: var(--card-hover-bg-color);
+}
+
+.coin-link {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+}
+
+.coin-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.coin-image:hover {
+    transform: scale(1.1);
+}
+
+.coin-info {
+    margin-top: 10px;
+}
+
+.coin-symbol {
+    font-weight: bold;
+    color: var(--coin-symbol-color);
+}
+
+.coin-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--coin-name-color);
+}
+
+.coin-price {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--coin-price-color);
+    margin-top: 5px;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center; /* Centers the buttons vertically */
+    margin-top: 20px;
+    width: 100%;
+    flex-wrap: wrap; /* Allows the buttons to wrap to the next line if needed */
+}
+
+.pagination-btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    min-width: 80px; /* Ensures a minimum button width */
+}
+
+.pagination-btn:hover {
+    background-color: #45a049;
+}
+
+.pagination-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.pagination-btn:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .pagination-btn {
+        font-size: 14px; /* Slightly smaller text on smaller screens */
+        padding: 8px 16px; /* Smaller padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination-container {
+        flex-direction: column; /* Stack buttons vertically on very small screens */
+        align-items: center; /* Keep the buttons centered */
+    }
+
+    .pagination-btn {
+        margin: 5px 0; /* Reduce margin between buttons when stacked */
+        width: 100%; /* Make buttons full-width on small screens */
+    }
+}
+
+.pagination-info {
+    text-align: center;  /* Centers the text horizontally */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color); /* Change text color based on theme */
+}
+
+.pagination-info p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Coins detail page */
+
+/* General Container */
+.coin-details-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart Section */
+.chart-container {
+  margin: 20px 0;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Button Group Styling */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.button-group button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s ease;
+}
+
+.button-group button:disabled {
+  background-color: #ddd;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.button-group button:hover:not(:disabled) {
+  transform: scale(1.1);
+  background-color: #0056b3;
+}
+
+/* Currency Selector Styling */
+.currency-selector {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.currency-selector label {
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.currency-selector input {
+  margin-right: 8px;
+}
+
+/* Coin Details Section */
+.coin-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.coin-details img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.coin-info {
+  text-align: left;
+}
+
+.coin-info p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.coin-info .price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.coin-info .rank {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Stats Section */
+.stats {
+  margin-top: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stats p {
+  font-size: 15px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+}
+
+.stats p span {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .coin-details {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .coin-info {
+    text-align: center;
+  }
+
+  .stats {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+/* Nav Bar */
+
+/* Navbar.css */
+
+.navbar {
+  background-color: #3182ce; /* Blue color */
+  color: white;
+  padding: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-right: 24px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #63b3ed; /* Lighter blue color */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Home Page */
+
+/* General Styles */
+.home {
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #2b6cb0;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #63b3ed;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #3182ce;
+}
+
+/* Featured Cryptocurrencies */
+.featured-cryptos {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f7fafc;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.crypto-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.crypto-card {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.crypto-card:hover {
+  transform: translateY(-10px);
+}
+
+.crypto-image {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.crypto-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.crypto-info {
+  color: #4a5568;
+}
+
+/* Benefits Section */
+.benefits {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #edf2f7;
+}
+
+.benefits-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.benefits-list li {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #2d3748;
+}
+
+/* Footer */
+.footer {
+  background-color: #2d3748;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
+.why-track, .benefits, .why-us {
+  padding: 3rem 1rem;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.why-track {
+  padding: 2.5rem 1.5rem;
+  background: linear-gradient(to bottom right, #4f46e5, #60a5fa);
+  color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color:black;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #3182ce;
+}
+
+.why-track-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.why-track-list li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.why-track-list li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.why-track-list li strong {
+  color: #ffffff;
+}
+
+
+.benefits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.benefit-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+}
+
+.benefit-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefit-card ul li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.why-us-list li {
+  font-size: 1.1rem;
+  margin: 0.75rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Faq section */
+
+.faq {
+  background-color: #f8fafc;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq-item {
+  border-left: 4px solid #3182ce;
+  padding-left: 1rem;
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-top: 0.5rem;
+}
