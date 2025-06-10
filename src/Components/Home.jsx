@@ -20,7 +20,7 @@ const Home = () => {
         <div className="crypto-grid">
           <div className="crypto-card">
             <img
-              src="https://cryptologos.cc/logos/bitcoin-btc-logo.png"
+              src="https://cdn.pixabay.com/photo/2017/03/12/02/57/bitcoin-2136339_640.png"
               alt="Bitcoin"
               className="crypto-image"
             />
@@ -29,7 +29,7 @@ const Home = () => {
           </div>
           <div className="crypto-card">
             <img
-              src="https://cryptologos.cc/logos/ethereum-eth-logo.png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJDn0ojTITvcdAzMsfBMJaZC4STaDHzduleQ&s"
               alt="Ethereum"
               className="crypto-image"
             />
@@ -38,7 +38,7 @@ const Home = () => {
           </div>
           <div className="crypto-card">
             <img
-              src="https://cryptologos.cc/logos/xrp-xrp-logo.png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3_AejetAyECv4mv1h6aW5ExgtQ8V7PsUNDbQx01zmNg7dVofAHgchVZlITLUHlvRJesU&usqp=CAU"
               alt="Ripple"
               className="crypto-image"
             />
